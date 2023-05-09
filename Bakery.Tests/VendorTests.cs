@@ -1,7 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Collections.Generic;
 using Bakery.Models;
+using System.Collections.Generic;
 using System;
+
 
 namespace Bakery.Tests
 {
@@ -25,7 +26,7 @@ namespace Bakery.Tests
     public void GetDescription_ReturnsDescription_String()
     {
       //Arrange
-      string description = "Walk the dog.";
+      string description = "Matt's Coffee Cart";
 
       //Act
       Vendor newVendor = new Vendor(description);
@@ -39,11 +40,11 @@ namespace Bakery.Tests
     public void SetDescription_SetDescription_String()
     {
       //Arrange
-      string description = "Walk the dog.";
+      string description = "Matt's Coffee Cart";
       Vendor newVendor = new Vendor(description);
 
       //Act
-      string updatedDescription = "Do the dishes";
+      string updatedDescription = "Allie's Cafe";
       newVendor.Description = updatedDescription;
       string result = newVendor.Description;
 
@@ -68,8 +69,8 @@ namespace Bakery.Tests
     public void GetAll_ReturnsVendors_VendorList()
     {
       //Arrange
-      string description01 = "Walk the dog";
-      string description02 = "Wash the dishes";
+      string description01 = "Matt's Coffee Cart";
+      string description02 = "Allie's Cafe";
       Vendor newVendor1 = new Vendor(description01);
       Vendor newVendor2 = new Vendor(description02);
       List<Vendor> newList = new List<Vendor> { newVendor1, newVendor2 };

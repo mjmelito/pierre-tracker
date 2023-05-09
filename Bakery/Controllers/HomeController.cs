@@ -12,5 +12,11 @@ namespace Bakery.Controllers
       return View(starterVendor);
     }
 
+    [Route("/vendors/new")]
+    public ActionResult VendorForm()
+    {
+      return View();
+    }
+
   }
 }
